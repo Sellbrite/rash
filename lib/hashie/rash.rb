@@ -18,7 +18,7 @@ module Hashie
       when ::Hash
         val = val.dup if duping
         self.class.new(val)
-      when Array
+      when ::Array
         val.collect{ |e| convert_value(e) }
       else
         val
